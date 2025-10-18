@@ -1,15 +1,9 @@
 import { IsNotEmpty, IsNumber, IsString } from 'class-validator';
-
-export class CreateProductDto {
-  @IsNotEmpty()
-  @IsString()
-  name: string;
-
+export class CreatePlanDeEstudiosDto {
   @IsNotEmpty()
   @IsNumber()
-  price: number;
-
+  version: number;
   @IsNotEmpty()
   @IsString()
-  description: string;
+  carreraId: string;
 }
