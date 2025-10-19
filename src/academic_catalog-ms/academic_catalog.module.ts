@@ -6,6 +6,8 @@ import { CarrerasController } from './carreras.controller';
 import { PlanDeEstudiosController } from './plan_de_estudios.controller';
 import { MateriasController } from './materias.controller';
 import { PrerequisitosController } from './prerequisitos.controller';
+import { OfertasGrupoMateriaController } from './ofertas_grupo_materia.controller';
+import { MaestrosDeOfertaController } from './maestros_de_oferta.controller';
 
 @Module({
   controllers: [
@@ -14,8 +16,9 @@ import { PrerequisitosController } from './prerequisitos.controller';
     PlanDeEstudiosController,
     MateriasController,
     PrerequisitosController,
+    MaestrosDeOfertaController,
+    OfertasGrupoMateriaController,
   ],
-  providers: [],
   imports: [
     ClientsModule.register([
       {

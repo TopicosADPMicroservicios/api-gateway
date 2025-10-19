@@ -1,13 +1,11 @@
 import { IsNotEmpty, IsString, IsUUID } from 'class-validator';
 
-export class CreatePrerequisitoDto {
+export class CreateDetalleInscripcionDto {
   @IsNotEmpty()
-  @IsString()
   @IsUUID()
-  siglaMateria: string;
+  fichaInscripcionId: string;
 
   @IsNotEmpty()
   @IsString()
-  @IsUUID()
-  siglaPreRequisito: string;
+  tipo: string;
 }

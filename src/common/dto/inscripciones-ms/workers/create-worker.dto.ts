@@ -1,10 +1,14 @@
 import { IsNotEmpty, IsNumber, IsString, IsUUID } from 'class-validator';
-export class CreatePlanDeEstudiosDto {
-  @IsNotEmpty()
-  @IsNumber()
-  version: number;
+export class CreateWorkerDto {
   @IsNotEmpty()
   @IsString()
+  nombre: string;
+
+  @IsNotEmpty()
+  @IsNumber()
+  concurrencia: number;
+
+  @IsNotEmpty()
   @IsUUID()
-  carreraId: string;
+  colaId: string;
 }

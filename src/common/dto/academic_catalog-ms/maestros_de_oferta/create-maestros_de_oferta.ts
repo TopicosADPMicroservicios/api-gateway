@@ -1,13 +1,12 @@
 import { IsNotEmpty, IsString, IsUUID } from 'class-validator';
 
-export class CreatePrerequisitoDto {
+export class CreateMaestrosDeOfertaDto {
   @IsNotEmpty()
   @IsString()
   @IsUUID()
-  siglaMateria: string;
-
+  periodoId: string;
   @IsNotEmpty()
   @IsString()
   @IsUUID()
-  siglaPreRequisito: string;
+  estudianteId: string;
 }
