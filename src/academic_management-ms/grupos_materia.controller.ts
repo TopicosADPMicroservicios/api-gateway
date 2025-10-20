@@ -35,11 +35,6 @@ export class GruposMateriaController {
     );
   }
 
-  @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.gruposMateriaClient.send({ cmd: 'find_one_grupo_materia' }, id);
-  }
-
   @Patch(':id')
   update(
     @Param('id') id: string,
@@ -54,5 +49,24 @@ export class GruposMateriaController {
   @Delete(':id')
   remove(@Param('id') id: string) {
     return this.gruposMateriaClient.send({ cmd: 'delete_grupo_materia' }, id);
+  }
+
+  //INSCRIPCIONES
+  @Patch('disminuir-cupo')
+  updateCupo(@Body() grupoMateriaId: string[]) {
+    return this.gruposMateriaClient.send(
+      { cmd: 'disminuir_cupo' },
+      grupoMateriaId,
+    );
+  }
+
+  @Get('materia-cupo')
+  findMateriasConCupo(@Body() grupoMateriaId: string[]) {
+    return this.gruposMateriaClient.send({ cmd: 'hay_cupos' }, grupoMateriaId);
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.gruposMateriaClient.send({ cmd: 'find_one_grupo_materia' }, id);
   }
 }

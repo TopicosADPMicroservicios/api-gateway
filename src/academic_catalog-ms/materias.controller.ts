@@ -12,6 +12,7 @@ import { ClientProxy } from '@nestjs/microservices';
 import { ACADEMIC_CATALOG_SERVICE } from 'src/config';
 import { CreateMateriaDto } from 'src/common/dto/academic_catalog-ms/materias/create-materia.dto';
 import { UpdateMateriaDto } from 'src/common/dto/academic_catalog-ms/materias/update-materia.dto';
+import type { GetMateriasDto } from 'src/common/dto/academic_catalog-ms/materias/get-materias.dto';
 
 @Controller('materias')
 export class MateriasController {
@@ -29,8 +30,11 @@ export class MateriasController {
   }
 
   @Get()
-  findAll() {
-    return this.materiasClient.send({ cmd: 'find_all_materias' }, {});
+  findAll(@Body() getMateriasDto: GetMateriasDto) {
+    return this.materiasClient.send(
+      { cmd: 'find_all_materias' },
+      getMateriasDto.grupoMateriaId,
+    );
   }
 
   @Get(':id')

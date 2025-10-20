@@ -13,6 +13,7 @@ import { WorkersController } from './workers.controller';
 import { EndpointsController } from './endpoints.controller';
 import { ColaEndpointController } from './cola_endpoint.controller';
 import { AuthController } from './auth.controller';
+import { InscripcionController } from './inscripcion.controller';
 
 @Module({
   controllers: [
@@ -28,6 +29,7 @@ import { AuthController } from './auth.controller';
     EndpointsController,
     ColaEndpointController,
     AuthController,
+    InscripcionController,
   ],
   imports: [
     ClientsModule.register([
