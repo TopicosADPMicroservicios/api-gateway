@@ -7,5 +7,9 @@ export class CreateColaDto {
 
   @IsNotEmpty()
   @IsString()
-  descripcion?: string;
+  descripcion: string;
+
+  @IsNotEmpty()
+  @IsString()
+  queueName: string;
 }

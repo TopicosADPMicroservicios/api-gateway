@@ -10,8 +10,6 @@ import { DetInscripcionOfertaController } from './det_inscripcion_oferta.control
 import { BoletaGrupoMateriaController } from './boleta_grupo_materia.controller';
 import { ColasController } from './colas.controller';
 import { WorkersController } from './workers.controller';
-import { EndpointsController } from './endpoints.controller';
-import { ColaEndpointController } from './cola_endpoint.controller';
 import { AuthController } from './auth.controller';
 import { InscripcionController } from './inscripcion.controller';
 
@@ -26,8 +24,6 @@ import { InscripcionController } from './inscripcion.controller';
     BoletaGrupoMateriaController,
     ColasController,
     WorkersController,
-    EndpointsController,
-    ColaEndpointController,
     AuthController,
     InscripcionController,
   ],
